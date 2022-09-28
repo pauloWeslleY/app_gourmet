@@ -61,27 +61,6 @@ export function Footer({
                color={THEME.COLORS.FOOTER_LINE_COLOR}
             />
             <VStack py={3}>
-               {/* <HStack
-                  justify={"center"}
-                  color={THEME.COLORS.FOOTER_TEXT_COLOR}
-               >
-                  <Text fontSize={"1.2rem"}>
-                     {link_text}{" "}
-                     <chakra.a
-                        cursor={"pointer"}
-                        color={THEME.COLORS.FOOTER_LINK_COLOR}
-                        onClick={link_for_page}
-                        textDecoration={"none"}
-                        transition={"all 0.2s ease-in-out"}
-                        _hover={{
-                           color: THEME.COLORS.TEXT_2,
-                        }}
-                     >
-                        {link_name}
-                     </chakra.a>
-                  </Text>
-               </HStack> */}
-
                <Text
                   textAlign={"center"}
                   fontSize={"1rem"}

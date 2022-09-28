@@ -8,7 +8,7 @@ export function Contact({ title, color }: TitleProps) {
    const { THEME } = useThemeColors();
 
    return (
-      <Box py={"5rem"} bg={THEME.COLORS.BG__SECTION_COLOR_TWO}>
+      <Box py={"5rem"} bg={THEME.COLORS.BACKGROUND_3}>
          <Center py={"1rem"}>
             <HeadTitle title={title} color={color} />
          </Center>

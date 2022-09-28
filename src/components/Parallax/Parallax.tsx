@@ -1,4 +1,5 @@
 import { memo } from "react";
+
 import { TitleProps } from "../Products";
 
 import styles from "./style.module.scss";

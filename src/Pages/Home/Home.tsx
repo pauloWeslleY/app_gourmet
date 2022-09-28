@@ -3,7 +3,7 @@ import { Box, Center } from "@chakra-ui/react";
 import {
    CardCarousel,
    HeadTitle,
-   HeroHome,
+   Destach,
    Line,
    Contact,
    Parallax,
@@ -12,16 +12,17 @@ import {
    Products,
    Carousel,
    StaticHome,
-   Section,
    Banner,
+   TestimonialCreated,
    About,
    Footer,
    card_props,
-   banner4,
    banner3,
 } from "./index";
+import { useThemeColors } from "../../hooks/useThemeColors";
 
 export function Home() {
+   const { THEME } = useThemeColors();
    return (
       <section>
          <Banner
@@ -32,25 +33,29 @@ export function Home() {
                Hellonext is a feature voting software where you can allow your users to vote on features,
                publish roadmap, and complete your customer feedback loop.
             `}
-            image={banner4}
+            image={"/images/banner/banner4.jpg"}
          />
          <Line />
 
-         <Box h={"70vh"} bg={"red.100"}>
+         <Box h={"70vh"} bg={THEME.COLORS.BACKGROUND_1}>
             <Center pt={"3rem"}>
-               <HeadTitle title={"Cakes and Candys"} color={"brown.50"} />
+               <HeadTitle
+                  title={"Cakes and Candys"}
+                  color={THEME.COLORS.TITLE_COLOR}
+               />
             </Center>
             <Box mx={"auto"} w={"100%"} maxW={"1245px"} py={"5rem"}>
                {card_props && <CardCarousel cards={card_props} />}
             </Box>
          </Box>
+
+         <Box pt={"5rem"} bg={THEME.COLORS.BACKGROUND_1}>
+            <Parallax title={"The best cakes you find here"} />
+         </Box>
          <Line />
 
-         <Parallax title={"The best cakes you find here"} />
-         <Line />
-
-         <HeroHome title={"Cakes Destach"} />
-         <Products title={"Products"} color={"brown.50"} />
+         <Destach title={"Cakes Destach"} color={THEME.COLORS.TITLE_COLOR} />
+         <Products title={"Products"} color={THEME.COLORS.TITLE_COLOR} />
          <Line />
 
          <Carousel />
@@ -74,10 +79,12 @@ export function Home() {
             option allow you to quickly find any data you’re looking for.`}
             image={banner3}
          />
+         <TestimonialCreated />
+
          <Line />
 
          <ParallaxThree />
-         <Contact title={"Contact us"} color={"brown.50"} />
+         <Contact title={"Contact us"} color={THEME.COLORS.TITLE_COLOR} />
          <Line />
          <Footer
             head_title={"Candys&Cakes"}

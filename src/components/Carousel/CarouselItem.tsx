@@ -5,14 +5,21 @@ import {
    VStack,
    useBreakpointValue,
 } from "@chakra-ui/react";
+import { useThemeColors } from "../../hooks/useThemeColors";
 import { CardType } from "../../types/CardType";
 
+import styles from "./styles.module.scss";
 interface CarouselProps {
    carousel: CardType;
 }
 
 export function CarouselItem({ carousel }: CarouselProps) {
    const { title, image } = carousel;
+   const { THEME } = useThemeColors();
+
+   const font = useBreakpointValue({ base: "3xl", md: "4xl" });
+   const padding = useBreakpointValue({ base: 4, md: 8 });
+
    return (
       <Flex
          w={"full"}
@@ -24,15 +31,16 @@ export function CarouselItem({ carousel }: CarouselProps) {
          <VStack
             w={"full"}
             justify={"center"}
-            px={useBreakpointValue({ base: 4, md: 8 })}
+            px={padding}
             bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
          >
             <Stack maxW={"2xl"} align={"flex-start"} spacing={6}>
                <Text
-                  color={"white"}
+                  color={THEME.COLORS.CAROUSEL_TITLE_COLOR}
                   fontWeight={700}
                   lineHeight={1.2}
-                  fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+                  fontSize={font}
+                  className={styles.carousel__item}
                >
                   {title}
                </Text>

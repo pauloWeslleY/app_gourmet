@@ -14,7 +14,7 @@ export function StaticHome({ title, text }: StaticProps) {
 
    return (
       <Flex
-         bg={THEME.COLORS.BG__SECTION_COLOR}
+         bg={THEME.COLORS.BACKGROUND_2}
          p={15}
          w={"auto"}
          justifyContent={"center"}

@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { Box, Flex, chakra } from "@chakra-ui/react";
 import { useThemeColors } from "../../hooks/useThemeColors";
-// import { memo } from "react";
+import { DataProductsProps } from "./../../data/DataProduct";
 
-export function ProductsCard({ image }: any) {
+export function ProductsCard({ title, image }: DataProductsProps) {
    const { THEME } = useThemeColors();
 
    return (
@@ -32,7 +33,7 @@ export function ProductsCard({ image }: any) {
                   base: 56,
                   md: 64,
                }}
-               bg={THEME.COLORS.PRODUCTS_CARD_BG}
+               bg={THEME.COLORS.PRODUCTS__CARD_BG}
                mt={-10}
                shadow={"lg"}
                rounded={"lg"}
@@ -52,7 +53,7 @@ export function ProductsCard({ image }: any) {
                   color={THEME.COLORS.TEXT}
                   letterSpacing={1}
                >
-                  Nike Revolt
+                  {title}
                </chakra.h3>
             </Box>
          </Flex>
@@ -60,4 +61,4 @@ export function ProductsCard({ image }: any) {
    );
 }
 
-// export default memo(ProductsCard);
+export default memo(ProductsCard);

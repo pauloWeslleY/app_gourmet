@@ -20,7 +20,7 @@ export function CardCarouselItem({ card_props }: CardCarousel) {
          justifyContent={"center"}
       >
          <Box
-            bg={THEME.COLORS.CARD_CAROUSEL_BG}
+            bg={THEME.COLORS.CARD__CAROUSEL_BG}
             maxW={"sm"}
             rounded={"lg"}
             shadow={"lg"}

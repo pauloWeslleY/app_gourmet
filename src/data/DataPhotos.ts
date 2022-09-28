@@ -4,11 +4,16 @@ import Cake3 from "./../assets/cake3.jpg";
 import Cake4 from "./../assets/cake4.jpg";
 
 //? Banner
+import banner from "./../assets/banner/banner.jpg";
 import banner1 from "./../assets/banner/banner1.jpg";
 import banner2 from "./../assets/banner/banner2.jpg";
 import banner3 from "./../assets/banner/banner3.jpg";
 import banner4 from "./../assets/banner/banner4.jpg";
 import banner5 from "./../assets/banner/banner5.jpg";
+import banner6 from "./../assets/banner/banner6.jpg";
+import banner7 from "./../assets/banner/banner7.jpg";
+import banner8 from "./../assets/banner/banner8.jpg";
+import banner9 from "./../assets/banner/banner9.jpg";
 
 //? Cards
 import card1 from "./../assets/cards/card1.jpg";
@@ -39,11 +44,16 @@ export {
    card2,
    card3,
    card4,
+   banner,
    banner1,
    banner2,
    banner3,
    banner4,
    banner5,
+   banner6,
+   banner7,
+   banner8,
+   banner9,
    Cake,
    Cake2,
    Cake3,

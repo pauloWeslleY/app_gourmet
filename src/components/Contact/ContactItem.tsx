@@ -7,7 +7,6 @@ export function ContactItem({ name, text, icons }: ContactProps) {
    const { THEME } = useThemeColors();
    return (
       <Box
-         // bg={THEME.COLORS.TEXT}
          display={"flex"}
          flexDir={"column"}
          justifyContent={"center"}
