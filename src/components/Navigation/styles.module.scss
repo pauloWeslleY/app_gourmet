@@ -1,0 +1,32 @@
+.nav__item {
+   display: inline-block;
+   font-size: 1.5rem;
+   font-weight: bold;
+   text-align: center;
+   border: 0;
+   border-radius: 1rem;
+   padding: 8px 15px;
+   color: var(--brown-70);
+   background-color: transparent;
+   cursor: pointer;
+   overflow: hidden;
+   transform: translate(0);
+
+   &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, var(--green-10), var(--green-30));
+      transition: 0.4s ease;
+      transform: scaleX(0);
+      transform-origin: 100% 0%;
+   }
+
+   &:hover::before {
+      transform: scaleX(1.1) scaleY(1.1);
+   }
+}
