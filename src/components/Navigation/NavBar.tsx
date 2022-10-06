@@ -6,14 +6,12 @@ import {
    IconButton,
    useDisclosure,
    Stack,
+   Container,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { NavItem, useThemeColors } from "./index";
 
-import { ToggleButtonMode } from "./../ToggleButtonMode/index";
-import { useThemeColors } from "../../hooks/useThemeColors";
-import { NavItem } from "./index";
-
-const Links = ["Home", "Candys", "Cakes", "About", "Contact"];
+const Links = ["Home", "Candy's", "Cakes", "About", "Contact"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
    <NavItem title={children} />
@@ -24,40 +22,32 @@ export function NavBar() {
    const { THEME } = useThemeColors();
 
    return (
-      <nav>
-         <Box py={"1rem"} display={"flex"} justifyContent={"center"}>
-            <Box
+      <Box p={4}>
+         <Container maxW={"xl"}>
+            <Flex
+               align={"center"}
+               justify={"center"}
                rounded={"lg"}
-               w={{ base: "100%", xs: "75rem" }}
-               maxW={{
-                  base: "1415px",
-                  xs: "75px",
-               }}
-               bg={THEME.COLORS.BG__NAVIGATION}
-               px={4}
                shadow={"dark-lg"}
+               bg={"transparent"}
             >
-               <Flex
-                  h={16}
-                  alignItems={"center"}
-                  justifyContent={"space-between"}
-               >
+               <Flex h={"auto"} alignItems={"center"} p={2}>
+                  <IconButton
+                     size={"md"}
+                     icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+                     aria-label={"Open Menu"}
+                     display={{ md: "none" }}
+                     onClick={isOpen ? onClose : onOpen}
+                     color={THEME.COLORS.TITLE_COLOR}
+                     bg={"transparent"}
+                     _hover={{
+                        bg: "transparent",
+                     }}
+                     _active={{
+                        bg: "transparent",
+                     }}
+                  />
                   <HStack spacing={8} alignItems={"center"}>
-                     <IconButton
-                        size={"md"}
-                        icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                        aria-label={"Open Menu"}
-                        display={{ md: "none" }}
-                        onClick={isOpen ? onClose : onOpen}
-                        color={THEME.COLORS.TEXT}
-                        bg={"transparent"}
-                        _hover={{
-                           bg: "transparent",
-                        }}
-                        _active={{
-                           bg: "transparent",
-                        }}
-                     />
                      <HStack
                         as={"nav"}
                         spacing={4}
@@ -68,9 +58,6 @@ export function NavBar() {
                         ))}
                      </HStack>
                   </HStack>
-                  <Flex alignItems={"center"}>
-                     <ToggleButtonMode />
-                  </Flex>
                </Flex>
 
                {isOpen ? (
@@ -82,9 +69,9 @@ export function NavBar() {
                      </Stack>
                   </Box>
                ) : null}
-            </Box>
-         </Box>
-      </nav>
+            </Flex>
+         </Container>
+      </Box>
    );
 }
 

@@ -3,5 +3,11 @@ import AboutContent from "./AboutContent";
 import AboutContentTwo from "./AboutContentTwo";
 import { AboutProps } from "./../../types/AboutType";
 
-export { About, AboutContent, AboutContentTwo };
+import { Btn } from "../Btn";
+
+
+import { useThemeColors } from "../../hooks/useThemeColors";
+
+
+export { About, AboutContent, AboutContentTwo, useThemeColors, Btn };
 export type { AboutProps };

@@ -1,9 +1,9 @@
 import { memo } from "react";
-import { Box, Center } from "@chakra-ui/react";
+import { Box, Center, Container } from "@chakra-ui/react";
 import {
    CardCarousel,
    HeadTitle,
-   Destach,
+   Detach,
    Line,
    Contact,
    Parallax,
@@ -23,30 +23,40 @@ import { useThemeColors } from "../../hooks/useThemeColors";
 
 export function Home() {
    const { THEME } = useThemeColors();
+   const image = "/images/banner/banner4.jpg";
+
    return (
       <section>
-         <Banner
-            title={"Welcome to Our"}
-            title2={"Gourmet Sweets and Cakes"}
-            title3={"Confectionery."}
-            text={`
-               Hellonext is a feature voting software where you can allow your users to vote on features,
-               publish roadmap, and complete your customer feedback loop.
-            `}
-            image={"/images/banner/banner4.jpg"}
-         />
+         <Box
+            w={"full"}
+            h={"80vh"}
+            backgroundImage={`url(${image})`}
+            bgPos={"center"}
+            bgSize={"cover"}
+         >
+            <Banner
+               title={"Welcome to Our"}
+               title2={"Gourmet Sweets and Cakes"}
+               title3={"Confectionery."}
+               text={`
+                  Hellonext is a feature voting software where you can allow your users to vote on features,
+                  publish roadmap, and complete your customer feedback loop.
+               `}
+               // image={"/images/banner/banner4.jpg"}
+            />
+         </Box>
          <Line />
 
-         <Box h={"70vh"} bg={THEME.COLORS.BACKGROUND_1}>
-            <Center pt={"3rem"}>
-               <HeadTitle
-                  title={"Cakes and Candys"}
-                  color={THEME.COLORS.TITLE_COLOR}
-               />
-            </Center>
-            <Box mx={"auto"} w={"100%"} maxW={"1245px"} py={"5rem"}>
+         <Box bg={THEME.COLORS.BACKGROUND_1}>
+            <Container maxW={"7xl"}>
+               <Center pt={"3rem"}>
+                  <HeadTitle
+                     title={"Cakes and Candys"}
+                     color={THEME.COLORS.TITLE_COLOR}
+                  />
+               </Center>
                {card_props && <CardCarousel cards={card_props} />}
-            </Box>
+            </Container>
          </Box>
 
          <Box pt={"5rem"} bg={THEME.COLORS.BACKGROUND_1}>
@@ -54,7 +64,7 @@ export function Home() {
          </Box>
          <Line />
 
-         <Destach title={"Cakes Destach"} color={THEME.COLORS.TITLE_COLOR} />
+         <Detach title={"Cakes Detach"} color={THEME.COLORS.TITLE_COLOR} />
          <Products title={"Products"} color={THEME.COLORS.TITLE_COLOR} />
          <Line />
 

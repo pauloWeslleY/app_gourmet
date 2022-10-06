@@ -1,8 +1,6 @@
 import { memo } from "react";
-import { Box, SimpleGrid, chakra, Button, Image } from "@chakra-ui/react";
-import { useThemeColors } from "../../hooks/useThemeColors";
-import { AboutProps } from "./index";
-import { Btn } from "../Btn";
+import { Box, SimpleGrid, chakra, Image } from "@chakra-ui/react";
+import { AboutProps, useThemeColors, Btn } from "./index";
 
 export function AboutContent({ title, subtitle, image }: AboutProps) {
    const { THEME } = useThemeColors();
@@ -37,7 +35,7 @@ export function AboutContent({ title, subtitle, image }: AboutProps) {
                   base: "center",
                   md: "left",
                }}
-               color={THEME.COLORS.TEXT}
+               color={THEME.COLORS.TITLE_COLOR}
                lineHeight={{
                   md: "shorter",
                }}
@@ -50,7 +48,7 @@ export function AboutContent({ title, subtitle, image }: AboutProps) {
                   base: "center",
                   sm: "left",
                }}
-               color={THEME.COLORS.TEXT_2}
+               color={THEME.COLORS.TEXT}
                fontSize={{
                   md: "1.4rem",
                }}

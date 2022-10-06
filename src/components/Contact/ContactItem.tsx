@@ -1,17 +1,16 @@
 import { memo } from "react";
-import { Box, chakra, Icon } from "@chakra-ui/react";
+import { Box, chakra, Flex, Icon } from "@chakra-ui/react";
 import { ContactProps } from "./index";
 import { useThemeColors } from "../../hooks/useThemeColors";
 
 export function ContactItem({ name, text, icons }: ContactProps) {
    const { THEME } = useThemeColors();
    return (
-      <Box
-         display={"flex"}
+      <Flex
          flexDir={"column"}
          justifyContent={"center"}
          alignItems={"center"}
-         flexBasis={"100px"}
+         flexBasis={"20rem"}
          flexGrow={1}
          flexShrink={1}
          shadow={"xl"}
@@ -23,21 +22,14 @@ export function ContactItem({ name, text, icons }: ContactProps) {
             transform: "rotate(-2deg)",
          }}
       >
-         <Box
-            transition={"all 0.6s ease-in"}
-            _hover={{
-               transform: "translateY(-10px)",
-            }}
-         >
-            <Icon as={icons} w={70} h={70} color={THEME.COLORS.TEXT} />
-         </Box>
+         <Icon as={icons} w={70} h={70} color={THEME.COLORS.TEXT} />
          <Box py={5} textAlign={"center"} color={THEME.COLORS.TEXT}>
             <chakra.h2 fontSize={"2xl"} fontWeight={"bold"}>
                {name}
             </chakra.h2>
             <chakra.span fontSize={"1.5rem"}>{text}</chakra.span>
          </Box>
-      </Box>
+      </Flex>
    );
 }
 

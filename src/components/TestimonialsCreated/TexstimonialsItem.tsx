@@ -10,7 +10,7 @@ interface TestimonialCardProps {
 }
 
 export function TestimonialCard(props: TestimonialCardProps) {
-   const { name, role, content, avatar, index } = props;
+   const { name, role, content, avatar } = props;
    const { THEME } = useThemeColors();
 
    return (
@@ -24,23 +24,20 @@ export function TestimonialCard(props: TestimonialCardProps) {
          p={10}
          justifyContent={"space-between"}
          position={"relative"}
-         bg={THEME.COLORS.TEXT}
+         bg={THEME.COLORS.TITLE_COLOR}
       >
          <Flex
             direction={"column"}
             textAlign={"left"}
             justifyContent={"space-between"}
-            color={THEME.COLORS.TEXT_2}
+            color={THEME.COLORS.TEXT_LIGHTEN}
          >
             <chakra.p fontWeight={"medium"} fontSize={"15px"} pb={4}>
                {content}
             </chakra.p>
             <chakra.p fontWeight={"bold"} fontSize={14}>
                {name}
-               <chakra.span
-                  fontWeight={"medium"}
-                  color={THEME.COLORS.TEXT_LIGHTEN}
-               >
+               <chakra.span fontWeight={"medium"} color={THEME.COLORS.TEXT_2}>
                   {" "}
                   - {role}
                </chakra.span>

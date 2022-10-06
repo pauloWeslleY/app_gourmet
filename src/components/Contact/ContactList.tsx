@@ -4,7 +4,7 @@ import { ContactItem, contact_props } from "./index";
 
 export function ContactList() {
    return (
-      <Container maxW={"1345px"}>
+      <Container maxW={"7xl"}>
          <Box display={"flex"} flexWrap={"wrap"}>
             {contact_props.map((item) => (
                <ContactItem

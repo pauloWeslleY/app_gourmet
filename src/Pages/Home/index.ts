@@ -2,7 +2,7 @@ import Home from "./Home";
 import { Banner } from "../../components/Banner";
 import { CardCarousel } from "../../components/CardCarousel";
 import { HeadTitle } from "../../components/HeadTitle";
-import { Destach } from "../../components/Destach";
+import { Detach } from "../../components/Detach";
 import { Products } from "../../components/Products";
 import { Carousel } from "../../components/Carousel";
 import { Parallax, ParallaxTwo, ParallaxThree } from "../../components/Parallax";
@@ -23,7 +23,7 @@ export {
    CardCarousel,
    Contact,
    HeadTitle,
-   Destach,
+   Detach,
    Line,
    Parallax,
    Products,

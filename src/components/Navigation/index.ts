@@ -2,4 +2,7 @@ import Navigation from "./Navigation";
 import NavBar from "./NavBar";
 import NavItem from "./NavItem";
 
-export { Navigation, NavBar, NavItem };
+import { useThemeColors } from "../../hooks/useThemeColors";
+
+
+export { Navigation, NavBar, NavItem, useThemeColors };

@@ -1,19 +1,19 @@
 import { memo } from "react";
-import { Box, Center } from "@chakra-ui/react";
-import { useThemeColors } from "../../hooks/useThemeColors";
-import { ContactList, HeadTitle } from "./index";
-import { TitleProps } from "./../../types/TitleType";
+import { Box, Center, Container } from "@chakra-ui/react";
+import { ContactList, HeadTitle, TitleProps, useThemeColors } from "./index";
 
 export function Contact({ title, color }: TitleProps) {
    const { THEME } = useThemeColors();
 
    return (
       <Box py={"5rem"} bg={THEME.COLORS.BACKGROUND_3}>
-         <Center py={"1rem"}>
-            <HeadTitle title={title} color={color} />
-         </Center>
+         <Container maxW={"7xl"}>
+            <Center py={"1rem"}>
+               <HeadTitle title={title} color={color} />
+            </Center>
 
-         <ContactList />
+            <ContactList />
+         </Container>
       </Box>
    );
 }
