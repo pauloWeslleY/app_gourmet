@@ -10,7 +10,6 @@ import {
    Box,
 } from "@chakra-ui/react";
 import { useThemeColors } from "../../hooks/useThemeColors";
-
 import { TitleProps, card1, card2, card3 } from "./index";
 
 export function Detach({ title, color }: TitleProps) {

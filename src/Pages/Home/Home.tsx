@@ -23,28 +23,27 @@ import { useThemeColors } from "../../hooks/useThemeColors";
 
 export function Home() {
    const { THEME } = useThemeColors();
-   const image = "/images/banner/banner4.jpg";
+   // const image = "/images/banner/banner4.jpg";
 
    return (
       <section>
-         <Box
+         {/* <Box
             w={"full"}
             h={"80vh"}
             backgroundImage={`url(${image})`}
             bgPos={"center"}
             bgSize={"cover"}
-         >
-            <Banner
-               title={"Welcome to Our"}
-               title2={"Gourmet Sweets and Cakes"}
-               title3={"Confectionery."}
-               text={`
+         ></Box> */}
+         <Banner
+            title={"Welcome to Our"}
+            title2={"Gourmet Sweets and Cakes"}
+            title3={"Confectionery."}
+            text={`
                   Hellonext is a feature voting software where you can allow your users to vote on features,
                   publish roadmap, and complete your customer feedback loop.
                `}
-               // image={"/images/banner/banner4.jpg"}
-            />
-         </Box>
+            image={"/images/banner/banner4.jpg"}
+         />
          <Line />
 
          <Box bg={THEME.COLORS.BACKGROUND_1}>

@@ -12,7 +12,13 @@ interface Banner {
 
 export function Banner({ title, title2, title3, text, image }: Banner) {
    return (
-      <Box>
+      <Box
+         w={"full"}
+         h={"80vh"}
+         backgroundImage={`url(${image})`}
+         bgPos={"center"}
+         bgSize={"cover"}
+      >
          <NavBar />
 
          <BannerContent

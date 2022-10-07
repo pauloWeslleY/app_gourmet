@@ -1,7 +1,7 @@
 import { memo } from "react";
-import { HStack, Flex, Avatar, chakra } from "@chakra-ui/react";
+import { HStack, Flex, Avatar, chakra, Image } from "@chakra-ui/react";
 import { FaCandyCane } from "react-icons/fa";
-import { useThemeColors } from "../../hooks/useThemeColors";
+import { useThemeColors } from "./index";
 
 interface Nav {
    title: string;
@@ -10,6 +10,7 @@ interface Nav {
 
 export function Navigation({ title, span }: Nav) {
    const { THEME } = useThemeColors();
+   const candys = "/candysicon.png";
 
    return (
       <chakra.header
@@ -23,19 +24,18 @@ export function Navigation({ title, span }: Nav) {
          }}
          py={4}
       >
-         <Flex
-            alignItems={"center"}
-            justifyContent={"center"}
-            mx={"auto"}
-            h={"3rem"}
-         >
+         <Flex alignItems={"center"} justifyContent={"center"} h={"3rem"}>
             <HStack
                spacing={4}
                display={"flex"}
                alignItems={"center"}
                justify={"center"}
             >
-               <Avatar size={"md"} icon={<FaCandyCane fontSize={"2rem"} />} />
+               <Image
+                  boxSize={"3rem"}
+                  alt={"Logo Candy's&Cakes"}
+                  src={"/004-candy-cane.png"}
+               />
                <chakra.h1
                   color={THEME.COLORS.NAVBAR__TITLE_COLOR}
                   fontSize={"1.8rem"}
